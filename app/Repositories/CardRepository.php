@@ -46,8 +46,6 @@ class CardRepository implements ICardRepository
 
         $new = $this->model->create($data->all());
 
-        $numbers = array();
-
         foreach ($card as $value) {
             foreach ($value['values'] as $row) {
                 CardColumn::create([
